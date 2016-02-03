@@ -1,0 +1,25 @@
+{
+  "name": "gulp-starter",
+  "description": "My starter for web projects.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Jason Swetzoff"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Sass",
+    "Gulp"
+  ],
+  "homepage": "https://github.com/Jaswetz/gulp-starter",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation-sites": "~6.1.2"
+  }
+}

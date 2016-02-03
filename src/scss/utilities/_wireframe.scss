@@ -1,0 +1,91 @@
+// Wireframe
+
+@if $wireframe == true {
+
+    section,
+    footer,
+    aside,
+    main,
+    nav,
+    article,
+    header,
+    .wire-block {
+        background-color: whitesmoke !important;
+        border: 1px solid gainsboro !important;
+        font: small sans-serif;
+        margin: $spacing--small;
+
+        > section,
+        > footer,
+        > aside,
+        > main,
+        > nav,
+        > article,
+        > header,
+        .wire-block {
+
+          background-color: darken(whitesmoke, 5%) !important;
+
+          h1 {
+            color: darken(gainsboro, 10%) !important;
+          }
+
+              > section,
+              > footer,
+              > aside,
+              > main,
+              > nav,
+              > article,
+              > header,
+              .wire-block {
+
+                background-color: darken(whitesmoke, 10%) !important;
+
+                h1 {
+                  color: darken(gainsboro, 15%) !important;
+                }
+              }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+          text-align: center;
+          color: silver;
+          font-weight: 100;
+          margin: $spacing--small;
+        }
+    }
+
+} // End If
+
+// Layout
+
+@include breakpoint(xlarge up) {
+    .site-wrap {
+        display: flex;
+        height: 100vh;
+    }
+
+    .main-content {
+        flex: 1 1 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .section__inner {
+            max-width: ($spacing * 40);
+        }
+    }
+
+    .site-footer {
+        .section__inner {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    .sidebar {
+        flex: 0 0 ($spacing * 12);
+    }
+}

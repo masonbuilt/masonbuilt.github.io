@@ -6,4 +6,3 @@ build/**/images/*
 build/development
 bower_components
 temp/
-build/
