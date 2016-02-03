@@ -2,7 +2,7 @@
 Last updated: 020316
 
 Note:
-This might be out of date. Mostly for planning at the beggining of project.
+This might be out of date. Mostly for planning at the beginning of project.
 
 ---
 
