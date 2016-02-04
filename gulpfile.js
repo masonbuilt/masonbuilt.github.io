@@ -149,7 +149,7 @@ gulp.task('styleguide:applystyles', function() {
     .pipe(gulp.dest(outputPath));
 });
 
-gulp.task('watch', ['styleguide', 'serve'], function() {
+gulp.task('default', ['styleguide', 'serve'], function() {
   // Start watching changes and update styleguide whenever changes are detected
   // Styleguide automatically detects existing server instance
   gulp.watch(['src/scss/**/*.scss'], ['styleguide']);
@@ -159,4 +159,4 @@ gulp.task('watch', ['styleguide', 'serve'], function() {
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
 // Default task
-gulp.task('default', ['serve']);
+gulp.task('watch', ['serve']);
