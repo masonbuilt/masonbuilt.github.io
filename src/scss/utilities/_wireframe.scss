@@ -15,36 +15,17 @@
         font: small sans-serif;
         margin: $spacing--small;
 
-        > section,
-        > footer,
-        > aside,
-        > main,
-        > nav,
-        > article,
-        > header,
+        section,
+        footer,
+        aside,
+        main,
+        nav,
+        article,
+        header,
         .wire-block {
 
-          background-color: darken(whitesmoke, 5%) !important;
+          background-color: rgba(#e8e8e8, .4) !important;
 
-          h1 {
-            color: darken(gainsboro, 10%) !important;
-          }
-
-              > section,
-              > footer,
-              > aside,
-              > main,
-              > nav,
-              > article,
-              > header,
-              .wire-block {
-
-                background-color: darken(whitesmoke, 10%) !important;
-
-                h1 {
-                  color: darken(gainsboro, 15%) !important;
-                }
-              }
         }
 
         h1,
@@ -87,5 +68,17 @@
 
     .sidebar {
         flex: 0 0 ($spacing * 12);
+    }
+}
+
+@include breakpoint(medium up) {
+    .section-who {
+        .section__inner {
+            display: flex;
+        }
+
+        .bio {
+            width: 50%;
+        }
     }
 }
