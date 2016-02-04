@@ -1,0 +1,153 @@
+a.pseudo-class-active,
+a.pseudo-class-hover {
+  outline: 0;
+}
+
+.btn.pseudo-class-hover,
+.btn.pseudo-class-focus,
+button.pseudo-class-hover,
+button.pseudo-class-focus,
+input[type="button"].pseudo-class-hover,
+input[type="button"].pseudo-class-focus,
+input[type="reset"].pseudo-class-hover,
+input[type="reset"].pseudo-class-focus,
+input[type="submit"].pseudo-class-hover,
+input[type="submit"].pseudo-class-focus {
+  background-color: transparent;
+}
+
+.btn.pseudo-class-disabled,
+button.pseudo-class-disabled,
+input[type="button"].pseudo-class-disabled,
+input[type="reset"].pseudo-class-disabled,
+input[type="submit"].pseudo-class-disabled {
+  cursor: not-allowed;
+  color: #7e7e7e;
+  border-color: #b1b1b1;
+  background: #b1b1b1;
+}
+
+.btn.pseudo-class-disabled.pseudo-class-hover,
+button.pseudo-class-disabled.pseudo-class-hover,
+input[type="button"].pseudo-class-disabled.pseudo-class-hover,
+input[type="reset"].pseudo-class-disabled.pseudo-class-hover,
+input[type="submit"].pseudo-class-disabled.pseudo-class-hover {
+  color: #7e7e7e;
+  border-color: #b1b1b1;
+  background: #b1b1b1;
+}
+
+.btn--success.pseudo-class-hover,
+.btn--success.pseudo-class-focus {
+  color: #0f9d58;
+}
+
+.btn--error.pseudo-class-hover,
+.btn--error.pseudo-class-focus {
+  color: #cb4437;
+}
+
+.btn--warning.pseudo-class-hover,
+.btn--warning.pseudo-class-focus {
+  color: #f4b400;
+}
+
+.btn--info.pseudo-class-hover,
+.btn--info.pseudo-class-focus {
+  color: #b233df;
+}
+
+.btn--outline--success.pseudo-class-hover,
+.btn--outline--success.pseudo-class-focus {
+  color: #02110a;
+  background-color: #0f9d58;
+}
+
+.btn--outline--error.pseudo-class-hover,
+.btn--outline--error.pseudo-class-focus {
+  color: #531b16;
+  background-color: #cb4437;
+}
+
+.btn--outline--warning.pseudo-class-hover,
+.btn--outline--warning.pseudo-class-focus {
+  color: #5b4300;
+  background-color: #f4b400;
+}
+
+.btn--outline--info.pseudo-class-hover,
+.btn--outline--info.pseudo-class-focus {
+  color: #521069;
+  background-color: #b233df;
+}
+
+.btn--text.pseudo-class-hover,
+.btn--text.pseudo-class-focus {
+  color: #5f90e6;
+}
+
+.btn--theme1.pseudo-class-hover {
+  background: rgba(69, 105, 144, 0.3);
+}
+
+.btn--theme1--solid.pseudo-class-hover {
+  background: rgba(69, 105, 144, 0.3);
+  color: #456990;
+}
+
+.btn--theme2.pseudo-class-hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.btn--theme2--solid.pseudo-class-hover {
+  background: rgba(69, 105, 144, 0.6);
+  color: #ffffff;
+}
+
+input[type="email"].pseudo-class-focus,
+input[type="number"].pseudo-class-focus,
+input[type="password"].pseudo-class-focus,
+input[type="search"].pseudo-class-focus,
+input[type="tel"].pseudo-class-focus,
+input[type="text"].pseudo-class-focus,
+input[type="url"].pseudo-class-focus,
+textarea.pseudo-class-focus,
+select.pseudo-class-focus {
+  border-color: #b1b1b1;
+  outline: 0;
+}
+
+.field-container.pseudo-class-first-child {
+  margin-top: 0;
+}
+
+a.pseudo-class-visited {
+  font-family: "Istok Web", "Helvetica Neu", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #3372df;
+}
+
+a.pseudo-class-hover,
+a.pseudo-class-focus,
+a.pseudo-class-visited.pseudo-class-hover,
+a.pseudo-class-visited.pseudo-class-focus {
+  color: #174595;
+}
+
+.list--horiz__item.pseudo-class-first-child {
+  margin-left: 0;
+}
+
+table th.pseudo-class-first-child,
+table td.pseudo-class-first-child {
+  padding-left: 0;
+}
+
+table th.pseudo-class-last-child,
+table td.pseudo-class-last-child {
+  padding-right: 0;
+}
+
+blockquote *.pseudo-class-last-child {
+  margin: 0;
+}
