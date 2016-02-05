@@ -9,7 +9,7 @@
 
 // Config
 // Config comes first to overide foundation base vars
-@import "utilities/config";
+@import "1-utilities/config";
 
 // Foundation 2
 @import "../../bower_components/foundation-sites/scss/foundation";
@@ -21,27 +21,28 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic");
 
 // Utils
-@import "utilities/reset";
-@import "utilities/utilities";
-@import "utilities/helpers";
-@import "utilities/grid";
-@import "utilities/animations";
-@import "utilities/wireframe";
+@import "1-utilities/reset";
+@import "1-utilities/utilities";
+@import "1-utilities/helpers";
+@import "1-utilities/grid";
+@import "1-utilities/animations";
+@import "1-utilities/wireframe";
 
 // Atoms
-@import "atoms/sg-atoms"; // Refrence only
-@import "atoms/sg-colors"; // Refrence only
-@import "atoms/body";
-@import "atoms/buttons";
-@import "atoms/forms";
-@import "atoms/links";
-@import "atoms/lists";
-@import "atoms/logo";
-@import "atoms/tables";
-@import "atoms/typography";
+@import "2-atoms/body";
+@import "2-atoms/buttons";
+@import "2-atoms/forms";
+@import "2-atoms/links";
+@import "2-atoms/lists";
+@import "2-atoms/logo";
+@import "2-atoms/tables";
+@import "2-atoms/typography";
 
 // Molecules
-@import "molecules/sg-molecules"; // Refrence only
+@import "3-molecules/block-grid";
+@import "3-molecules/theme";
 
 // Organisms
-@import "organisms/sg-organisms"; // Refrence only
+
+// Templates
+@import "5-templates/home";

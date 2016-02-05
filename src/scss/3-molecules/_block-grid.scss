@@ -1,0 +1,51 @@
+// Block Grid
+//
+// Must have '$wireframe' set to true to view in
+// layouts correctly in the styleguide.
+//
+// markup:
+// <div class="wireframe">
+// <ul class="block-grid">
+//     <li class="block-grid__item">
+//         <article><h2>2.3.1 Article</h2></article>
+//     </li>
+//     <li class="block-grid__item">
+//         <article><h2>2.3.2 Article</h2></article>
+//     </li>
+//     <li class="block-grid__item">
+//         <article><h2>2.3.3 Article</h2></article>
+//     </li>
+//     <li class="block-grid__item">
+//         <article><h2>2.3.4 Article</h2></article>
+//     </li>
+//     <li class="block-grid__item">
+//         <article><h2>2.3.5 Article</h2></article>
+//     </li>
+//     <li class="block-grid__item">
+//         <article><h2>2.3.6 Article</h2></article>
+//     </li>
+// </ul>
+// </div>
+//
+// Styleguide 2.1.1
+
+@include breakpoint(medium up) {
+    .block-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .block-grid__item {
+        flex: 1 0 50%;
+    }
+}
+
+@include breakpoint(large up) {
+    .block-grid__item {
+        flex: 1 0 30%;
+    }
+}
