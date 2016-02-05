@@ -42,43 +42,47 @@
 } // End If
 
 // Layout
+//
+// @include breakpoint(xlarge up) {
+//     .site-wrap {
+//         display: flex;
+//         height: 100vh;
+//     }
+//
+//     .main-content {
+//         flex: 1 1 0;
+//         overflow-x: hidden;
+//         overflow-y: scroll;
+//
+//         .section__inner {
+//             max-width: ($spacing * 40);
+//         }
+//     }
+//
+//     .site-footer {
+//         .section__inner {
+//             margin-right: auto;
+//             margin-left: auto;
+//         }
+//     }
+//
+//     .sidebar {
+//         flex: 0 0 ($spacing * 12);
+//     }
+// }
+//
+// @include breakpoint(medium up) {
+//     .section-who {
+//         .section__inner {
+//             display: flex;
+//         }
+//
+//         .bio {
+//             width: 50%;
+//         }
+//     }
+// }
 
-@include breakpoint(xlarge up) {
-    .site-wrap {
-        display: flex;
-        height: 100vh;
-    }
-
-    .main-content {
-        flex: 1 1 0;
-        overflow-x: hidden;
-        overflow-y: scroll;
-
-        .section__inner {
-            max-width: ($spacing * 40);
-        }
-    }
-
-    .site-footer {
-        .section__inner {
-            margin-right: auto;
-            margin-left: auto;
-        }
-    }
-
-    .sidebar {
-        flex: 0 0 ($spacing * 12);
-    }
-}
-
-@include breakpoint(medium up) {
-    .section-who {
-        .section__inner {
-            display: flex;
-        }
-
-        .bio {
-            width: 50%;
-        }
-    }
+img {
+    height: $spacing * 8;
 }
