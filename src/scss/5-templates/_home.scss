@@ -1,0 +1,136 @@
+// Pages
+//
+// Styleguide 4.0
+
+// Home
+//
+// markup:
+// <div class="wireframe">
+//     <!-- Site Wrap -->
+//     <div class="site-wrap">
+//         <!-- Main Sidebar -->
+//         <aside class="sidebar">
+//             <nav class="main-nav">
+//                 <h1>1. Sidebar</h1>
+//                 <h2>1.1 Site Nav</h2>
+//             </nav>
+//         </aside>
+//         <!-- Main Content -->
+//         <main class="main-content">
+//             <h1>2. Main Content</h1>
+//             <!-- Intro -->
+//             <section class="section-intro">
+//                 <h2>2.1 Site Intro</h2>
+//                 <div class="section__inner wire-block">
+//                     <h3>2.3.1 Section Inner</h3>
+//                 </div>
+//             </section>
+//             <!-- Who we are -->
+//             <section class="section-who">
+//                 <h2>2.2 Who we are</h2>
+//                 <div class="section__inner wire-block">
+//                         <div class="bio wire-block">
+//                             <h4>2.2.1 Michael's Bio</h4>
+//                         </div>
+//                         <div class="bio wire-block">
+//                             <h4>2.2.1 Jason's Bio</h4>
+//                     </div>
+//                 </div>
+//             </section>
+//             <!-- What we do -->
+//             <section class="section-what">
+//                 <h1>2.3 Section Inner</h1>
+//                 <div class="section__inner wire-block">
+//                     <ul class="block-grid">
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.1 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.2 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.3 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.4 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.5 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.6 Article</h2></article>
+//                         </li>
+//                     </ul>
+//                 </div>
+//             </section>
+//             <!-- Our process -->
+//             <section class="section-how">
+//                 <h2>2.4 Our process</h2>
+//                 <div class="section__inner wire-block">
+//                     <h3>2.4.1 Section Inner</h3>
+//                 </div>
+//             </section>
+//             <!-- Site footer -->
+//             <footer class="site-footer">
+//                 <h2>2.5 Site Footer</h2>
+//                 <div class="section__inner wire-block">
+//                     <h3>2.5.1 Section Inner</h3>
+//                 </div>
+//             </footer>
+//         </main>
+//     </div>
+// </div>
+//
+// Styleguide 4.1
+
+// Layout
+
+@include breakpoint(xlarge up) {
+    .site-wrap {
+        display: flex;
+        height: 100vh;
+    }
+
+    .main-content {
+        flex: 1 1 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .section__inner {
+            max-width: ($spacing * 40);
+        }
+    }
+
+    .sidebar {
+        flex: 0 0 ($spacing * 12);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        align-self: center;
+    }
+
+    .main-nav {
+        flex: 0 0 calc(100% - (#{$spacing}));
+    }
+
+    .site-footer {
+        .section__inner {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}
+
+@include breakpoint(medium up) {
+    .section-who {
+        .section__inner {
+            display: flex;
+        }
+
+        .bio {
+            width: 50%;
+        }
+    }
+}

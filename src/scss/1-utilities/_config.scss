@@ -92,18 +92,12 @@ $ui-colors: (
 
 // Theme Colors
 
-$color__bg--light: #E4FDE1;
-$color__bg--dark: #456990;
-$color__accent1: #028090;
-$color__accent2: #114B5F;
-$color__accent3: #F45B69;
-
-$color__fg1: rgba($color--white, .6);
-$color__fg1--bold: $color--white;
-$color__fg1--light: rgba($color--white, .3);
-$color__fg2: rgba($color__bg--dark, .6);
-$color__fg2--bold: $color__bg--dark;
-$color__fg2--light: rgba($color__bg--dark, .3);
+$color--theme1: #2B2D42;
+$color--theme2: #3A506B;
+$color--theme3: #818EA5;
+$color--theme4: #EDF2F4;
+$color--theme5: #5BC0BE;
+$color--theme6: #6FFFE9;
 
 // Border
 
@@ -135,8 +129,12 @@ $blockquote__background: $color--grey;
 
 // Button
 
-$button__border--width: .1rem;
-$button__font-stack: $font-family--secondary;
+$btn__border--width: .1rem;
+$btn__font-stack: $font-family--secondary;
+$btn__color: $color--theme2;
+$btn__font--color: $color--white;
+$btn__color--hover: darken($color--theme2, 10%);
+
 
 // Path to Assets
 

@@ -1,0 +1,39 @@
+// Wireframe
+@if $wireframe == true {
+    .wireframe {
+        section,
+        footer,
+        aside,
+        main,
+        nav,
+        article,
+        header,
+        .wire-block {
+            font: small sans-serif;
+            margin: $spacing--small;
+            border: 1px solid gainsboro !important;
+            background-color: whitesmoke !important;
+
+            section,
+            footer,
+            aside,
+            main,
+            nav,
+            article,
+            header,
+            .wire-block {
+                background-color: rgba(#e8e8e8, .4) !important;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-weight: 100;
+                margin: $spacing--small;
+                text-align: center;
+                color: silver;
+            }
+        }
+    }
+} // End if
