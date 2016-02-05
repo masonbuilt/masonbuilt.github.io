@@ -45,10 +45,22 @@
 
 }
 
+// Spacing
+
 .padding--full {
     padding: $spacing;
+
+    @include breakpoint(xlarge up) {
+        padding: $spacing * 2;
+    }
 }
 
 .margin--full {
     margin: $spacing;
+}
+
+// Typography
+
+.text-center {
+    text-align: center;
 }

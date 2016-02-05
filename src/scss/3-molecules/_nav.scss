@@ -1,0 +1,49 @@
+// Navigation
+//
+// Navigation Patterns
+//
+// Styleguide 2.2
+
+// Single Navigation
+//
+// markup:
+// <nav class="main-nav">
+//   <ul class="main-nav__list">
+//     <li class="main-nav__item"><a href="#who" class="main-nav__link">Who</a></li>
+//     <li class="main-nav__item"><a href="#what" class="main-nav__link">What</a></li>
+//     <li class="main-nav__item"><a href="#how" class="main-nav__link">How</a></li>
+//     <li class="main-nav__item"><a href="#contact" class="main-nav__link">Contact</a></li>
+//   </ul>
+// </nav>
+//
+// Styleguide 2.2.1
+
+.main-nav__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include breakpoint(large down) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.main-nav__item {
+    @include breakpoint(large up) {
+        margin-bottom: 0;
+    }
+    @include breakpoint(large down) {
+        margin-bottom: 0;
+    }
+}
+
+.main-nav__link {
+    display: block;
+    padding: $spacing--small;
+
+    @include breakpoint(xlarge up) {
+        text-align: right;
+    }
+}
