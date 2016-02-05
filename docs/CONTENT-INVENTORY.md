@@ -16,7 +16,6 @@ This might be out of date. Mostly for planning at the beginning of project.
 	- Jason
 		- Jason is...
 - What we do
-	- We create digital products, with purpose.
 		- Product strategy
 			- We strive to understand your goals and business. We work with you to create a great strategy. 
 		- User Research 
@@ -30,7 +29,8 @@ This might be out of date. Mostly for planning at the beginning of project.
 		- Web and Application Development
 			- We build responsive web apps and interactive websites. Our code is clean. Our design is crisp. And our performance is high. 
 - How we do it
-	- We are a two man team, focused on being your digital partner. We strive to understand our clients by communicating and sharing our progress often. We will guide you in the right direction.    
+	- We are a two man team, focused on being your digital partner. 
+	- We strive to understand your business and needs with collaboration, communicating and sharing our progress often. We will guide you in the right direction.    
 - Contact Us (footer)
 	- Contact Us (modal window)
 		- Contact form
