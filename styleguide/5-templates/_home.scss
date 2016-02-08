@@ -1,0 +1,222 @@
+// Pages
+//
+// Styleguide 4.0
+
+// Home
+//
+// markup:
+// <div class="wireframe">
+//     <!-- Site Wrap -->
+//     <div class="site-wrap">
+//         <!-- Main Sidebar -->
+//         <aside class="sidebar">
+//             <nav class="main-nav">
+//                 <h1>1. Sidebar</h1>
+//                 <h2>1.1 Site Nav</h2>
+//             </nav>
+//         </aside>
+//         <!-- Main Content -->
+//         <main class="main-content">
+//             <h1>2. Main Content</h1>
+//             <!-- Intro -->
+//             <section class="section-intro">
+//                 <h2>2.1 Site Intro</h2>
+//                 <div class="section__inner wire-block">
+//                     <h3>2.3.1 Section Inner</h3>
+//                 </div>
+//             </section>
+//             <!-- Who we are -->
+//             <section class="section-who">
+//                 <h2>2.2 Who we are</h2>
+//                 <div class="section__inner wire-block">
+//                         <div class="bio wire-block">
+//                             <h4>2.2.1 Michael's Bio</h4>
+//                         </div>
+//                         <div class="bio wire-block">
+//                             <h4>2.2.1 Jason's Bio</h4>
+//                     </div>
+//                 </div>
+//             </section>
+//             <!-- What we do -->
+//             <section class="section-what">
+//                 <h1>2.3 Section Inner</h1>
+//                 <div class="section__inner wire-block">
+//                     <ul class="block-grid">
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.1 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.2 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.3 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.4 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.5 Article</h2></article>
+//                         </li>
+//                         <li class="block-grid__item">
+//                             <article><h2>2.3.6 Article</h2></article>
+//                         </li>
+//                     </ul>
+//                 </div>
+//             </section>
+//             <!-- Our process -->
+//             <section class="section-how">
+//                 <h2>2.4 Our process</h2>
+//                 <div class="section__inner wire-block">
+//                     <h3>2.4.1 Section Inner</h3>
+//                 </div>
+//             </section>
+//             <!-- Site footer -->
+//             <footer class="site-footer">
+//                 <h2>2.5 Site Footer</h2>
+//                 <div class="section__inner wire-block">
+//                     <h3>2.5.1 Section Inner</h3>
+//                 </div>
+//             </footer>
+//         </main>
+//     </div>
+// </div>
+//
+// Styleguide 4.1
+
+svg {
+    width: 100%;
+}
+
+// Layout
+
+.section-intro {
+    background-image: url("../img/intro-bg.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top right;
+    background-size: 100% 100%;
+    font-size: 150%;
+
+    @include breakpoint(max-width $xlarge) {
+        padding-top: $spacing * 4;
+        padding-bottom: $spacing * 4;
+    }
+
+    .section__inner {
+        padding-left: $spacing;
+        padding-right: $spacing;
+    }
+}
+
+
+@include breakpoint($xlarge) {
+
+    .site-wrap {
+        display: flex;
+    }
+
+    .section-intro {
+        display: flex;
+        height: 100vh;
+
+        .section__inner {
+            align-self: center;
+            padding-left: $spacing * 2;
+        }
+    }
+
+    .main-content {
+        flex: 1 1 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin-left: $spacing * 10;
+
+        .section__inner {
+            max-width: ($spacing * 40);
+        }
+    }
+
+    .sidebar {
+        cursor: default;
+        height: 100vh;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        width: $spacing * 10;
+        z-index: 10000;
+        padding: $spacing;
+    }
+
+    .main-nav {
+        min-height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    .main-nav__list {
+        align-self: center;
+        width: 100%;
+    }
+
+}
+
+@include breakpoint(max-width $xlarge) {
+    .sidebar {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+
+.section-what {
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 0;
+            padding: $spacing--small;
+
+            @include breakpoint(max-width $xlarge) {
+                .icn-wrap {
+                    flex: 0 0 $spacing;
+                    margin-right: $spacing--small;
+                    display: flex;
+
+                    svg {
+                        margin-top: $spacing * .25;
+                        width: $spacing;
+                        height: $spacing;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-nav__link {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: $color--theme6;
+        height: 4px;
+        transform: scale3d(0, 1, 1);
+    	transition: transform 0.1s;
+    }
+}
+
+.is-current {
+    .main-nav__link {
+        &::before {
+            transform: scale3d(1, 1, 1);
+        	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        	transition-duration: 0.3s;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+// Buttons
+//
+// The buttons using the UI colors will mostly be used in applications.
+//
+// markup:
+// <div class="field-container">
+// <button class='btn btn--success' type='button'>Button Success</button>
+// <button class='btn btn--error' type='button'>Button Error</button>
+// <button class='btn btn--warning' type='button'>Button Warning</button>
+// <button class='btn btn--info' type='button'>Button Info</button>
+// </div><div class="field-container">
+// <button class='btn btn--outline btn--outline--success' type='button'>Button Success</button>
+// <button class='btn btn--outline btn--outline--error' type='button'>Button Error</button>
+// <button class='btn btn--outline btn--outline--warning' type='button'>Button Warning</button>
+// <button class='btn btn--outline btn--outline--info' type='button'>Button Info</button>
+// </div><div class="field-container">
+// <button class='btn btn--text' type="button">Text Button</button>
+// <button class='btn btn--default' type='button' disabled>Button Default</button>
+// </div>
+//
+// Styleguide 1.3
+
+.btn,
+a.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    font-family: $btn__font-stack;
+    font-size: $font-size--small;
+    font-weight: $font-weight--medium;
+    letter-spacing: 1px;
+    line-height: $base__line-height;
+    display: inline-block;
+    padding: ($spacing--small / 2) $spacing;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    border: $btn__border-width solid $btn__border-color;
+    background: $btn__color;
+    color: $btn__font-color;
+    border-radius: $border__radius;
+    transition: background $transition__time ease-out,
+    color $transition__time ease-out;
+
+    &:hover,
+    &:focus {
+        background-color: $btn__color--hover;
+        border-color: $btn__border-color--hover;
+        color: $btn__font-color--hover;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        color: darken($color--grey, 20%);
+        border-color: $color--grey;
+        background: $color--grey;
+
+        &:hover {
+            color: darken($color--grey, 20%);
+            border-color: $color--grey;
+            background: $color--grey;
+        }
+    }
+}
+
+.btn {
+    @include button-colors($ui-colors);
+}
+
+.btn--outline {
+    @include button-colors--outline($ui-colors);
+}
+
+.btn--text {
+    color: $color--blue;
+    border: none;
+    background: none;
+
+    &:hover,
+    &:focus {
+        color: lighten($color--blue, 10%);
+    }
+}
+
+// Buttons Placement
+//
+// markup:
+// <div class="field-container">
+// <button class='btn btn--default btn--fit' type='button'>Button Default</button>
+// </div>
+//
+// Styleguide 1.3.1
+
+.btn--fit {
+    display: block;
+    width: 100%;
+}
