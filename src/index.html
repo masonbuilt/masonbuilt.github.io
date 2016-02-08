@@ -8,109 +8,149 @@
 	</head>
 	<body>
 
+		<div style="height: 0; width: 0; position: absolute; visibility: hidden; display: none;">
+	    <!-- inject:svg --><!-- endinject -->
+	    </div>
+
 		<!-- Site Wrap -->
 		<div class="site-wrap">
 
 			<!-- Main Sidebar -->
 			<aside class="sidebar bg2">
 				<nav class="main-nav">
+					<svg class="icn-logo">
+						<use xlink:href="#icn-logo"></use>
+					</svg>
 		            <ul class="main-nav__list">
-						<li class="main-nav__item">
-		                    <a href="#intro" class="main-nav__link">Mason</a>
+						<li class="main-nav__item is-current">
+		                    <a data-scroll href="#intro" class="main-nav__link js-menuLink">Mason</a>
 		                </li>
 		                <li class="main-nav__item">
-		                    <a href="#who" class="main-nav__link">Who</a>
+		                    <a data-scroll href="#who" class="main-nav__link js-menuLink">Who</a>
 		                </li>
 		                <li class="main-nav__item">
-		                    <a href="#what" class="main-nav__link">What</a>
+		                    <a data-scroll href="#what" class="main-nav__link js-menuLink">What</a>
 		                </li>
 		                <li class="main-nav__item">
-		                    <a href="#how" class="main-nav__link">How</a>
+		                    <a data-scroll href="#how" class="main-nav__link js-menuLink">How</a>
 		                </li>
 		                <li class="main-nav__item">
-		                    <a href="#contact" class="main-nav__link">Contact</a>
+		                    <a data-scroll href="#contact" class="main-nav__link js-menuLink">Contact</a>
 		                </li>
 		            </ul>
 		        </nav>
 			</aside>
 
 			<!-- Main Content -->
-			<main class="main-content bg5">
+			<main class="main-content">
 				<!-- Intro -->
-				<section class="section-intro padding--full" id="intro">
+				<section class="section-intro bg5" id="intro">
 					<div class="section__inner wire-block">
-						<h1>Mason</h1>
-						<p>We build digital solutions for your business.</p>
+						<svg class="icn-logo">
+							<use xlink:href="#icn-logo"></use>
+						</svg>
+						<h1>We are Mason</h1>
+						<p>We create digital products, with purpose.</p>
 						<a href="#who" class="btn">Learn More</a>
 					</div>
 				</section>
 
 				<!-- Who we are -->
-				<section class="section-who padding--full bg1" id="who">
+				<section class="section-who padding--full bg4" id="who">
 					<div class="section__inner wire-block">
-							<div class="section-who__title">
-								<h1>Who we are</h1>
+						<div class="section-who__title">
+							<h1>Who we are</h1>
+						</div>
+						<div class="g--full g--1of2--large g--gutters">
+							<div class="g-cell">
+								<div class="bio__inner wire-block">
+									<figure class="bio__img">
+										<img src="http://placehold.it/200x200" alt="Michael Zemel">
+									</figure>
+									<h2>Michael's Bio</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Sed quae tandem ista ratio est? Fortasse id optimum, sed ubi illud: Plus semper voluptatis?
+										Age, inquies, ista parva sunt.</p>
+									</div>
 							</div>
-							<div class="bio wire-block">
-								<figure class="bio__img">
-									<img src="http://placehold.it/200x200" alt="Michael Zemel">
-								</figure>
-								<h2>Michael's Bio</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Sed quae tandem ista ratio est? Fortasse id optimum, sed ubi illud: Plus semper voluptatis?
-									Age, inquies, ista parva sunt.</p>
+							<div class="g-cell">
+								<div class="bio__inner wire-block">
+									<figure class="bio__img">
+										<img src="http://placehold.it/200x200" alt="Michael Zemel">
+									</figure>
+									<h2>Jason's Bio</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Sed quae tandem ista ratio est? Fortasse id optimum, sed ubi illud: Plus semper voluptatis?
+										Age, inquies, ista parva sunt.</p>
+								</div>
 							</div>
-							<div class="bio wire-block">
-								<figure class="bio__img">
-									<img src="http://placehold.it/200x200" alt="Michael Zemel">
-								</figure>
-								<h2>Jason's Bio</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Sed quae tandem ista ratio est? Fortasse id optimum, sed ubi illud: Plus semper voluptatis?
-									Age, inquies, ista parva sunt.</p>
 						</div>
 					</div>
 				</section>
 
 				<!-- What we do -->
-				<section class="section-what padding--full bg4" id="what">
-					<div class="section__inner wire-block">
+				<section class="section-what bg3" id="what">
+					<div class="section__inner wire-block padding--full">
 						<div class="section-what__title">
 							<h1>What we do</h1>
 						</div>
-						<ul class="block-grid">
-							<li class="block-grid__item">
+						<ul class="g--full g--1of2--large g--1of3--xlarge g">
+							<li class="g-cell">
 								<article>
+									<svg class="icn-tree">
+										<use xlink:href="#icn-tree"></use>
+									</svg>
 									<h2>Product Strategy</h2>
 									<p>We strive to understand your goals and business. We work with you to create a great strategy.</p>
 								</article>
 							</li>
-							<li class="block-grid__item">
+							<li class="g-cell">
 								<article>
+									<svg class="icn-user-check">
+										<use xlink:href="#icn-user-check"></use>
+									</svg>
 									<h2>User Research</h2>
 									<p>Understanding your audience helps shape our entire process. This not only allows us to discover new design oppurtunities but make more informed decisions along the way.</p>
 								</article>
 							</li>
-							<li class="block-grid__item">
+							<li class="g-cell">
 								<article>
+									<svg class="icn-lab">
+										<use xlink:href="#icn-lab"></use>
+									</svg>
 									<h2>User Experience Design</h2>
 									<p>We love to delight users but more importantly we love when users successfully accomplish their goals.</p>
 								</article>
 							</li>
-							<li class="block-grid__item">
+							<li class="g-cell">
 								<article>
-									<h2>Interaction Design</h2>
-									<p>Beautiful and consistent design is what makes a good interface. We design from the bottom up, making lego type pieces that fit together to make something great. Every project comes with it's own styleguide. </p>
+									<div class="g g--full--xlarge">
+										<div class="g-cell icn-wrap">
+											<svg class="icn-droplet">
+												<use xlink:href="#icn-droplet"></use>
+											</svg>
+										</div>
+										<div class="g-cell">
+											<h2>Interaction Design</h2>
+											<p>Beautiful and consistent design is what makes a good interface. We design from the bottom up, making lego type pieces that fit together to make something great. Every project comes with it's own styleguide. </p>
+										</div>
+									</div>
 								</article>
 							</li>
-							<li class="block-grid__item">
+							<li class="g-cell">
 								<article>
+									<svg class="icn-cogs">
+										<use xlink:href="#icn-cogs"></use>
+									</svg>
 									<h2>Prototyping and user testing</h2>
 									<p>Itteration is at the heart of what we do. Prototypes allow us to test and share our progress.</p>
 								</article>
 							</li>
-							<li class="block-grid__item">
+							<li class="g-cell">
 								<article>
+									<svg class="icn-embed2">
+										<use xlink:href="#icn-embed2"></use>
+									</svg>
 									<h2>Web and Application Development</h2>
 									<p>We build responsive web apps and interactive websites. Our code is clean. Our design is crisp. And our performance is high.</p>
 								</article>
@@ -120,7 +160,7 @@
 				</section>
 
 				<!-- Our process -->
-				<section class="section-how padding--full bg3" id="how">
+				<section class="section-how padding--full bg4" id="how">
 					<div class="section__inner wire-block">
 						<h1>How we do it</h1>
 						<p>We are a two man team, focused on being your digital partner.</p>
@@ -147,6 +187,9 @@
 		</div>
 
 		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.0.min.js"><\/script>')</script>
+		<script src="assets/js/all.js"></script>
 		<script src="assets/js/main.js"></script>
 
 	</body>

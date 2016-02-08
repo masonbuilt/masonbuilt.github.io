@@ -20,6 +20,13 @@
     "tests"
   ],
   "devDependencies": {
-    "foundation-sites": "~6.1.2"
+    "foundation-sites": "~6.1.2",
+    "compass-breakpoint": "breakpoint-sass#^2.6.1",
+    "normalize-strings": "normalize#^1.0.4",
+    "normalize-scss": "^3.0.3",
+    "waypoints": "^4.0.0"
+  },
+  "dependencies": {
+    "waypoints": "^4.0.0"
   }
 }

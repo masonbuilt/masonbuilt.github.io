@@ -106,6 +106,13 @@ gulp.task('compile-html', function() {
 
 // Compile Development JavaScript
 gulp.task('compile-javascript', function() {
+
+    gulp.src(['src/js/libs/**/*.js'])
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest(tempFolderAssets +'/js'))
+        .pipe(browserSync.stream());
+
+
     gulp.src(['src/js/main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest(tempFolderAssets +'/js'))
