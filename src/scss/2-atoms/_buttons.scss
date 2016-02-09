@@ -32,7 +32,7 @@ input[type="submit"] {
     letter-spacing: 1px;
     line-height: $base__line-height;
     display: inline-block;
-    padding: ($spacing--small / 2) $spacing;
+    padding: ($spacing--small) $spacing;
     cursor: pointer;
     text-align: center;
     white-space: nowrap;
