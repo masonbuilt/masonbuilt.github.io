@@ -4,6 +4,10 @@
 
 // Responsive
 
+img {
+    max-width: 100%;
+}
+
 %text {
     font-family: $font-family--primary;
     font-size: inherit;
@@ -13,7 +17,16 @@
 }
 
 html {
-    font-size: 125%
+    font-size: 100%;
+    @include breakpoint($medium) {
+        font-size: 110%;
+    }
+    @include breakpoint($medium) {
+        font-size: 115%;
+    }
+    @include breakpoint($xlarge) {
+        font-size: 125%;
+    }
 }
 
 .content {

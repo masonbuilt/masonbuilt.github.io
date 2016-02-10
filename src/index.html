@@ -15,10 +15,25 @@
 		<!-- Site Wrap -->
 		<div class="site-wrap">
 
+			<section class="contact">
+				<div class="contact__wrap js-contactWrap g g--full">
+					<div class="contact__title g-cell ">
+						<h2>We would love to chat!</h1>
+					</div>
+					<div class="contact__email g-cell">
+						Email:
+							<address>
+								<a href="#">info@mason.com</a>
+							</address>
+
+					</div>
+				</div>
+			</section>
+
 			<!-- Main Sidebar -->
-			<aside class="sidebar bg2">
+			<aside class="sidebar bg2 data-gumshoe-header">
 				<nav class="main-nav">
-		            <ul class="main-nav__list">
+		            <ul class="main-nav__list" data-gumshoe>
 						<li class="main-nav__item is-current logo">
 		                    <a data-scroll href="#intro" class="main-nav__link js-menuLink">
 								<span>Welcome</span>
@@ -36,8 +51,8 @@
 		                <li class="main-nav__item">
 		                    <a data-scroll href="#how" class="main-nav__link js-menuLink">How</a>
 		                </li>
-		                <li class="main-nav__item">
-		                    <a data-scroll href="#contact" class="main-nav__link js-menuLink">Contact</a>
+		                <li class="main-nav__contact js-btnContact">
+		                    <a href="" class="main-nav__link js-menuLink btn--action">Contact</a>
 		                </li>
 		            </ul>
 		        </nav>
@@ -50,7 +65,7 @@
 					<div class="section__inner wire-block">
 						<h1>We are Mason</h1>
 						<p>We create digital products, with purpose.</p>
-						<a href="#who" class="btn">Learn More</a>
+						<a href="#who" class="btn" data-scroll>Learn More</a>
 					</div>
 				</section>
 
@@ -59,28 +74,40 @@
 					<div class="section__inner wire-block">
 						<div class="section-who__title">
 							<h1>Who we are</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Quo modo autem philosophus loquitur? Ergo ita: non posse honeste vivi,
+								nisi honeste vivatur? Non laboro, inquit, de nomine. Nihil opus est
+								exemplis hoc facere longius.
+							</p>
 						</div>
-						<div class="g--full g--1of2--large g--gutters">
+						<div class="g--full g--1of2--medium g--gutters">
 							<div class="g-cell">
-								<div class="bio__inner wire-block">
+								<div class="bio__inner wire-block michael">
 									<figure class="bio__img">
-										<img src="http://placehold.it/200x200" alt="Michael Zemel">
+										<img src="http://placehold.it/1000x1000" alt="Michael Zemel">
 									</figure>
-									<h2>Michael's Bio</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Sed quae tandem ista ratio est? Fortasse id optimum, sed ubi illud: Plus semper voluptatis?
-										Age, inquies, ista parva sunt.</p>
+									<div class="bio__content">
+										<h2>Michael's Bio</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Sed quae tandem ista ratio est? Fortasse id optimum, sed ubi illud:
+											Plus semper voluptatis?
+											Age, inquies, ista parva sunt.</p>
+										</div>
 									</div>
 							</div>
 							<div class="g-cell">
-								<div class="bio__inner wire-block">
+								<div class="bio__inner wire-block jason">
 									<figure class="bio__img">
-										<img src="http://placehold.it/200x200" alt="Michael Zemel">
+										<img src="assets/img/jason.jpg" alt="Jason Swetzoff">
 									</figure>
-									<h2>Jason's Bio</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Sed quae tandem ista ratio est? Fortasse id optimum, sed ubi illud: Plus semper voluptatis?
-										Age, inquies, ista parva sunt.</p>
+									<div class="bio__content">
+										<h2>Jason's Bio</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											Sed quae tandem ista ratio est? Fortasse id optimum, sed ubi
+											illud: Plus semper voluptatis?
+											Age, inquies, ista parva sunt.</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -88,42 +115,70 @@
 				</section>
 
 				<!-- What we do -->
-				<section class="section-what bg3" id="what">
-					<div class="section__inner wire-block padding--full">
+				<section class="section-what padding--full bg3" id="what">
+					<div class="section__inner wire-block">
 						<div class="section-what__title">
 							<h1>What we do</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Quamquam id quidem, infinitum est in hac urbe; Hoc loco t
+								enere se Triarius non potuit. Quid ergo attinet
+								gloriose loqui, nisi constanter loquare?
+							</p>
 						</div>
-						<ul class="g--full g--1of2--large g--1of3--xlarge g">
+						<ul class="g--full g--1of2--large g--1of3--xxlarge g">
 							<li class="g-cell">
 								<article>
-									<svg class="icn-tree">
-										<use xlink:href="#icn-tree"></use>
-									</svg>
-									<h2>Product Strategy</h2>
-									<p>We strive to understand your goals and business. We work with you to create a great strategy.</p>
+									<div class="g">
+										<div class="g-cell icn-wrap">
+											<svg class="icn-tree">
+												<use xlink:href="#icn-tree"></use>
+											</svg>
+										</div>
+										<div class="g-cell">
+											<h2>Product Strategy</h2>
+											<p>We strive to understand your goals and business. We work
+												with you to create a great strategy.</p>
+										</div>
+								</div>
 								</article>
 							</li>
 							<li class="g-cell">
 								<article>
-									<svg class="icn-user-check">
-										<use xlink:href="#icn-user-check"></use>
-									</svg>
-									<h2>User Research</h2>
-									<p>Understanding your audience helps shape our entire process. This not only allows us to discover new design oppurtunities but make more informed decisions along the way.</p>
+									<div class="g">
+										<div class="g-cell icn-wrap">
+											<svg class="icn-user-check">
+												<use xlink:href="#icn-user-check"></use>
+											</svg>
+										</div>
+										<div class="g-cell">
+											<h2>User Research</h2>
+											<p>Understanding your audience helps shape our entire process.
+												This not only allows us to discover new design oppurtunities
+												but make more informed decisions along the way.</p>
+										</div>
+									</div>
 								</article>
 							</li>
 							<li class="g-cell">
 								<article>
-									<svg class="icn-lab">
-										<use xlink:href="#icn-lab"></use>
-									</svg>
-									<h2>User Experience Design</h2>
-									<p>We love to delight users but more importantly we love when users successfully accomplish their goals.</p>
+									<div class="g">
+										<div class="g-cell icn-wrap">
+											<svg class="icn-lab">
+												<use xlink:href="#icn-lab"></use>
+											</svg>
+										</div>
+										<div class="g-cell">
+											<h2>User Experience Design</h2>
+											<p>We love to delight users but more importantly we love when users
+												successfully accomplish their goals.</p>
+										</div
+									</div>
 								</article>
 							</li>
 							<li class="g-cell">
 								<article>
-									<div class="g g--full--xlarge">
+									<div class="g">
 										<div class="g-cell icn-wrap">
 											<svg class="icn-droplet">
 												<use xlink:href="#icn-droplet"></use>
@@ -131,27 +186,42 @@
 										</div>
 										<div class="g-cell">
 											<h2>Interaction Design</h2>
-											<p>Beautiful and consistent design is what makes a good interface. We design from the bottom up, making lego type pieces that fit together to make something great. Every project comes with it's own styleguide. </p>
+											<p>Beautiful and consistent design is what makes a good interface.
+												We design from the bottom up, making lego type pieces that fit together
+												to make something great. Every project comes with it's own styleguide. </p>
 										</div>
 									</div>
 								</article>
 							</li>
 							<li class="g-cell">
 								<article>
-									<svg class="icn-cogs">
-										<use xlink:href="#icn-cogs"></use>
-									</svg>
-									<h2>Prototyping and user testing</h2>
-									<p>Itteration is at the heart of what we do. Prototypes allow us to test and share our progress.</p>
+									<div class="g">
+										<div class="g-cell icn-wrap">
+											<svg class="icn-cogs">
+												<use xlink:href="#icn-cogs"></use>
+											</svg>
+										</div>
+										<div class="g-cell">
+											<h2>Prototyping and user testing</h2>
+											<p>Itteration is at the heart of what we do. Prototypes allow us to test and share our progress.</p>
+										</div>
+									</div>
 								</article>
 							</li>
 							<li class="g-cell">
 								<article>
-									<svg class="icn-embed2">
-										<use xlink:href="#icn-embed2"></use>
-									</svg>
-									<h2>Web and Application Development</h2>
-									<p>We build responsive web apps and interactive websites. Our code is clean. Our design is crisp. And our performance is high.</p>
+									<div class="g">
+										<div class="g-cell icn-wrap">
+											<svg class="icn-embed2">
+												<use xlink:href="#icn-embed2"></use>
+											</svg>
+										</div>
+										<div class="g-cell">
+											<h2>Web and Application Development</h2>
+											<p>We build responsive web apps and interactive websites. Our code is clean.
+												Our design is crisp. And our performance is high.</p>
+										</div>
+									</div>
 								</article>
 							</li>
 						</ul>
@@ -163,7 +233,8 @@
 					<div class="section__inner wire-block">
 						<h1>How we do it</h1>
 						<p>We are a two man team, focused on being your digital partner.</p>
-						<p>We strive to understand your business and needs with collaboration, communicating and sharing our progress often. We will guide you in the right direction.</p>
+						<p>We strive to understand your business and needs with collaboration, communicating and
+							sharing our progress often. We will guide you in the right direction.</p>
 						<figure>
 							<img src="http://placehold.it/350x150" alt="Process">
 						</figure>
@@ -171,14 +242,16 @@
 				</section>
 
 				<!-- Site footer -->
-				<footer class="site-footer padding--full bg2" id="contact">
+				<footer class="site-footer bg1" id="contact">
 					<div class="section__inner wire-block">
-						<h1>We would love to chat!</h1>
-						<address>
-							<h2>Email</h2>
-							<p>We will get back to you in the next 24 hours.</p>
-							<a href="">info@masonbuilt.com</a>
-						</address>
+						<div class="copyright">
+							Made by Mason
+						</div>
+						<div class="top">
+							<a data-scroll href="#intro">
+								Back to top
+							</a>
+						</div>
 					</div>
 				</footer>
 
