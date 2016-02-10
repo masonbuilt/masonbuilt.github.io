@@ -87,58 +87,8 @@ svg {
     width: 100%;
     fill: $color--white;
 }
-.logo {
-    .icn-logo {
-        display: none;
-    }
-    @include breakpoint($xlarge) {
-
-        position: absolute;
-        top: 10%;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-
-        a {
-            &:before,
-            &:after {
-                display: none;
-            }
-        }
-
-        .icn-logo {
-            display: block;
-            height: $spacing * 2;
-            fill: $color--theme5;
-        }
-        span {
-            display: none;
-        }
-    }
-}
-
-.main-nav__contact {
-    position: absolute;
-    width: calc(100% - ($spacing * 2));
-    bottom: $spacing * 2;
-    left: $spacing;
-    right: $spacing;
-    text-align: center;
-
-    a {
-        text-align: center;
-        &:before,
-        &:after {
-            display: none;
-        }
-    }
-
-}
 
 // Layout
-
-
 
 
 @include breakpoint($xlarge) {
@@ -259,6 +209,25 @@ svg {
 
 
 // Global
+
+h1 {
+    position: relative;
+    margin-bottom: $spacing * 2;
+    &:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        background: $color--white;
+        width: 100%;
+        left:0;
+        bottom: -$spacing--small;
+    }
+}
+
+.section-intro h1 {
+    margin-bottom: $spacing;
+}
+
 .section__inner {
     @include breakpoint($medium) {
         padding-top: $spacing * 2;
@@ -335,18 +304,28 @@ p {
 }
 
 .bio__content {
-    border-radius: 0 0 .25em .25em;
+    border-radius: $border__radius;
     background-color: $color--white;
     padding: $spacing;
+    padding-top: $spacing * 3;
 }
 
 .bio__img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: $spacing * 6;
+    height: $spacing * 6;
+    margin-bottom: - $spacing * 2;
+    margin-left: auto;
+    margin-right: auto;
 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     img {
-        border-radius: .25em .25em 0 0;
         width: 100%;
+        border-radius: 50%;
+        width: $spacing * 6;
+        height: $spacing * 6;
         display: block;
+        border: .25rem solid $color--white;
     }
 }
 
@@ -362,7 +341,6 @@ p {
 }
 
 .contact__wrap {
-    background-color: $color--teal;
     z-index: 2;
     width: 100%;
     padding: $spacing;
@@ -377,21 +355,22 @@ p {
     }
 
     @include breakpoint($xlarge) {
-        top: inherit;
-        bottom: 0;
-        transition: all .3s ease;
-        transform: translateY($spacing * 5) perspective(400px) rotate3d(1, 0, 0, 90deg);
+        left: $spacing * 10;
+        width: calc(100% - 300px );
+        top: 0;
+        // top: inherit;
+        // bottom: 0;
+        // transition: all .3s ease;
+        // transform: translateY($spacing * 5) perspective(400px) rotate3d(1, 0, 0, 90deg);
 
         &.is-active {
-            transform: translateY(0) perspective(400px);
+            // transform: translateY(0) perspective(400px);
         }
     }
 }
 
 .contact__title,
 .contact__email {
-    // border: $border--width $border--style rgba($color--white, .5);
-    // max-width: $spacing * 13;
     padding-top: $spacing--small * .8;
     padding-right: $spacing--small;
     padding-left: $spacing--small;
@@ -403,4 +382,34 @@ p {
 
 .contact__title {
     border-right: none;
+}
+
+.main-nav__contact {
+    text-align: center;
+    position: absolute;
+    right: 0;
+
+    a {
+        text-align: center;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+    @include breakpoint($xlarge) {
+        top: $spacing * 2;
+        left: $spacing;
+        right: $spacing;
+    }
+}
+
+.contact-arrow {
+    margin-left: .2rem;
+    display: inline-block;
+    transform: rotate3d(0, 0, 0, 0deg);
+    transition: all .3s ease;
+    .is-down & {
+        transform: rotate3d(1, 0, 0, 180deg);
+    }
 }
