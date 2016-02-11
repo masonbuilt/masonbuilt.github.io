@@ -83,6 +83,8 @@
 //
 // Styleguide 4.1
 
+// TODO: Refactor and break apart this page
+
 svg {
     width: 100%;
     fill: $color--white;
@@ -139,6 +141,7 @@ svg {
         position: fixed;
         width: 100%;
         top: 0;
+        z-index: 1;
     }
 }
 
@@ -173,6 +176,7 @@ svg {
 
 .main-nav__link {
     position: relative;
+
     &::before {
         content: '';
         position: absolute;
@@ -213,6 +217,8 @@ svg {
 h1 {
     position: relative;
     margin-bottom: $spacing * 2;
+    z-index: 0;
+
     &:after {
         content: "";
         position: absolute;
@@ -332,14 +338,6 @@ p {
 
 // Contact
 
-.contact__btn {
-    position: fixed;
-    bottom: 100px;
-    z-index: 2;
-    left: $spacing * 2;
-    bottom: $spacing * 3;
-}
-
 .contact__wrap {
     z-index: 2;
     width: 100%;
@@ -358,14 +356,6 @@ p {
         left: $spacing * 10;
         width: calc(100% - 300px );
         top: 0;
-        // top: inherit;
-        // bottom: 0;
-        // transition: all .3s ease;
-        // transform: translateY($spacing * 5) perspective(400px) rotate3d(1, 0, 0, 90deg);
-
-        &.is-active {
-            // transform: translateY(0) perspective(400px);
-        }
     }
 }
 
@@ -375,6 +365,7 @@ p {
     padding-right: $spacing--small;
     padding-left: $spacing--small;
     text-align: center;
+
     h2 {
         @extend .h4;
     }
@@ -389,8 +380,13 @@ p {
     position: absolute;
     right: 0;
 
+    @include breakpoint(max-width $small) {
+        left: 0;
+    }
+
     a {
         text-align: center;
+
         &:before,
         &:after {
             display: none;
@@ -409,6 +405,7 @@ p {
     display: inline-block;
     transform: rotate3d(0, 0, 0, 0deg);
     transition: all .3s ease;
+
     .is-down & {
         transform: rotate3d(1, 0, 0, 180deg);
     }

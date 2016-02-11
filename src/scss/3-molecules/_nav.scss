@@ -23,11 +23,18 @@
     margin: 0;
     list-style: none;
 
-    @include breakpoint(max-width $xlarge) {
+    @include breakpoint(0 $medium) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    @include breakpoint($medium $xlarge) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
 }
 
 .main-nav__item {
