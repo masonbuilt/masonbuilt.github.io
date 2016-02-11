@@ -2,28 +2,38 @@
 //
 // Backgrounds
 
-.bg1 {
-    background-color: $color--theme1;
-}
+// Dark Theme
 
-.bg2 {
-    background-color: $color--theme2;
-    color: $color--white;
+.theme--dark {
+    background-color: $color--theme-dark;
+    color: #D3D5F9;
 
-    a {
+    .main-nav__link {
         color: $color--white;
 
-        &:hover,
-        &:focus {
-            color: rgba($color--white, .7);
+        &:hover {
+            color: $color--white;
+        }
+
+        &:before {
+            background: $color--theme-secondary;
+        }
+
+        @include breakpoint($xlarge) {
+            &:after {
+                background: rgba($color--white, .15);
+            }
         }
     }
-
 }
 
-.bg3 {
-    background-color: $color--theme3;
-    color: $color--white;
+// Light Theme
+
+.theme--light {
+    background-color: $color--theme-light;
+    color: $color--black;
+
+    svg {fill: $color--black;}
 
     li {
         background: rgba($color--white, .1);
@@ -31,16 +41,17 @@
     }
 }
 
-.bg4 {
-    background-color: $color--theme4;
-    color: $color--theme1;
-}
+// Secondary Theme
 
-.bg5 {
-    background-color: $color--theme5;
+.theme--secondary {
+    background-color: $color--theme-secondary;
     color: $color--white;
 }
 
-.bg6 {
-    background-color: $color--theme6;
+
+
+
+.bg4 {
+    background-color: $color--theme-highlight;
+    color: $color--white;
 }
