@@ -33,11 +33,42 @@
     background-color: $color--theme-light;
     color: $color--black;
 
+    h1 {
+        color: $color--theme-primary;
+
+        &:after {
+            background: lighten($color--theme-primary, 20%);
+        }
+    }
+
+    svg {fill: $color--black;}
+}
+
+// Light Theme Secondary
+
+.theme--light--secondary {
+    background-color: $color--white;
+    color: $color--black;
+
+    h1 {
+        color: $color--theme-primary;
+        &:after {
+            background: lighten($color--theme-primary, 20%);
+        }
+    }
+
     svg {fill: $color--black;}
 
     li {
-        background: rgba($color--white, .1);
-        border: 1px solid rgba($color--white, .15);
+        background: $color--theme-light;
+        border: 1px solid darken($color--theme-light, 5%);
+
+        h2 {
+            color: $color--black;
+        }
+        svg {
+            fill: $color--theme-secondary;
+        }
     }
 }
 

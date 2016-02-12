@@ -166,10 +166,6 @@ svg {
                     height: $spacing;
                 }
             }
-
-            @include breakpoint(max-width $xlarge) {
-
-            }
         }
     }
 }
@@ -244,7 +240,7 @@ h1 {
 }
 
 p {
-    max-width: $spacing * 22;
+    // max-width: $spacing * 22;
 }
 
 // Section: Intro
