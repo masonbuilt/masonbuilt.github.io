@@ -153,17 +153,24 @@ svg {
 
         li {
             margin-bottom: 0;
-            padding: $spacing--small;
+            padding: $spacing;
+            text-align: center;
+            background: rgba($color--white, .1);
+            border: $border--width $border--style rgba($color--white, .15);
+
+            svg {
+                margin-bottom: $spacing;
+            }
 
             .icn-wrap {
-                flex: 0 0 $spacing;
-                margin-right: $spacing--small;
-                display: flex;
+                // flex: 0 0 $spacing;
+                // margin-right: $spacing--small;
+                // display: flex;
 
                 svg {
-                    margin-top: $spacing * .25;
-                    width: $spacing;
-                    height: $spacing;
+                    // margin-top: $spacing * .25;
+                    max-width: $spacing * 10;
+                    max-height: $spacing * 10;
                 }
             }
         }
@@ -211,7 +218,7 @@ svg {
 
 h1 {
     position: relative;
-    margin-bottom: $spacing * 2;
+    margin-bottom: $spacing;
     z-index: 0;
 
     &:after {
@@ -225,10 +232,6 @@ h1 {
     }
 }
 
-.section-intro h1 {
-    margin-bottom: $spacing;
-}
-
 .section__inner {
     @include breakpoint($medium) {
         padding-top: $spacing * 2;
@@ -238,98 +241,6 @@ h1 {
         padding: $spacing * 2;
     }
 }
-
-p {
-    // max-width: $spacing * 22;
-}
-
-// Section: Intro
-
-.section-intro {
-    background-image: url("../img/intro-bg.svg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top right;
-    background-size: 100% 100%;
-    font-size: 110%;
-
-    @include breakpoint(max-width $xlarge) {
-        margin-top: $spacing * 2; // Add spacing for fixed header
-    }
-
-    .section__inner {
-        padding-left: $spacing;
-        padding-right: $spacing;
-    }
-
-    @include breakpoint($xlarge) {
-        display: flex;
-        height: 100vh;
-        font-size: 150%;
-
-        .section__inner {
-            align-self: center;
-            padding-left: $spacing * 2;
-        }
-    }
-
-    @include breakpoint(max-width $xlarge) {
-        padding-top: $spacing * 4;
-        padding-bottom: $spacing * 4;
-    }
-
-}
-
-// Section: Who we are
-
-.section-who {
-    @include breakpoint($medium) {
-        .g--gutters {
-            margin-bottom: 0;
-        }
-    }
-}
-
-.section-who__title {
-    margin-bottom: $spacing * 2;
-}
-
-.bio__inner {
-    max-width: $spacing * 20;
-
-    &.michael {
-        @include breakpoint(max-width $medium) {
-            margin-bottom: $spacing;
-        }
-    }
-}
-
-.bio__content {
-    border-radius: $border__radius;
-    background-color: $color--white;
-    padding: $spacing;
-    padding-top: $spacing * 3;
-}
-
-.bio__img {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    width: $spacing * 6;
-    height: $spacing * 6;
-    margin-bottom: - $spacing * 2;
-    margin-left: auto;
-    margin-right: auto;
-
-    img {
-        width: 100%;
-        border-radius: 50%;
-        width: $spacing * 6;
-        height: $spacing * 6;
-        display: block;
-        border: .25rem solid $color--white;
-    }
-}
-
 
 // Contact
 
@@ -342,12 +253,16 @@ p {
     position: fixed;
     transition: all .3s ease;
     transform: translateY(- $spacing * 5) perspective(400px) rotate3d(1, 0, 0, 90deg);
+    border-bottom: $border--width $border--style $border--color;
+    border-top: $border--width $border--style $border--color;
 
     &.is-active {
         transform: translateY(0) perspective(400px);
     }
 
     @include breakpoint($xlarge) {
+        border-top: none;
+        border-left: $border--width $border--style $border--color;
         left: $spacing * 10;
         width: calc(100% - 300px );
         top: 0;
@@ -366,6 +281,17 @@ p {
     }
 }
 
+.contact__email {
+    a {
+        color: $color--white;
+        border-bottom: $border--width $border--style $border--color;
+
+        &:hover {
+            border: none;
+        }
+    }
+}
+
 .contact__title {
     border-right: none;
 }
@@ -374,6 +300,25 @@ p {
     text-align: center;
     position: absolute;
     right: 0;
+
+    .main-nav__link {
+        background: $color--theme-dark;
+
+        &:focus {
+            background: $color--theme-dark;
+        }
+        &:hover {
+            background: lighten($color--theme-dark, 10%);
+            color: $color--white;
+        }
+
+        @include breakpoint($small) {
+            border: $border--width $border--style $border--color;
+            margin: $spacing--small / 2;
+            padding-top: $spacing--small / 2;
+            padding-bottom: $spacing--small / 2;
+        }
+    }
 
     @include breakpoint(max-width $small) {
         left: 0;
@@ -404,4 +349,18 @@ p {
     .is-down & {
         transform: rotate3d(1, 0, 0, 180deg);
     }
+}
+
+// How we do it
+
+.process__block {
+    border: ($border--width * 2) $border--style $border--color;
+    padding: $spacing;
+    width: $spacing * 10;
+    height: $spacing * 10;
+}
+
+.process__title {
+    text-align: center;
+    margin-top: $spacing--small;
 }

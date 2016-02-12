@@ -1,0 +1,44 @@
+// Section: Intro
+
+.section-intro {
+    background-image: url("../img/intro-bg.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top right;
+    background-size: 100% 100%;
+
+
+    h1 {
+        font-size: $font-size--xxlarge;
+        margin-bottom: $spacing;
+    }
+
+    p {
+        font-size: $font-size--big;
+    }
+
+    .section__inner {
+        max-width: $spacing * 20;
+        padding-right: $spacing;
+        padding-left: $spacing;
+    }
+
+    @include breakpoint(max-width $xlarge) {
+        margin-top: $spacing * 2; // Add spacing for fixed header
+        padding-top: $spacing * 4;
+        padding-bottom: $spacing * 4;
+    }
+
+
+    @include breakpoint($xlarge) {
+        font-size: 150%;
+        display: flex;
+        height: 100vh;
+
+        .section__inner {
+            padding-left: $spacing * 2;
+            align-self: center;
+        }
+    }
+
+}

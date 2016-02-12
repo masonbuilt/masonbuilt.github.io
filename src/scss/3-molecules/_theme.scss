@@ -6,7 +6,7 @@
 
 .theme--dark {
     background-color: $color--theme-dark;
-    color: #D3D5F9;
+    color: $color--white;
 
     .main-nav__link {
         color: $color--white;
@@ -30,14 +30,14 @@
 // Light Theme
 
 .theme--light {
-    background-color: $color--theme-light;
-    color: $color--black;
+    background-color: $color--theme-primary;
+    color: $color--white;
 
     h1 {
-        color: $color--theme-primary;
+        color: $color--white;
 
         &:after {
-            background: lighten($color--theme-primary, 20%);
+            background: $color--white;
         }
     }
 
@@ -47,28 +47,21 @@
 // Light Theme Secondary
 
 .theme--light--secondary {
-    background-color: $color--white;
-    color: $color--black;
+    background-color: $color--theme-highlight;
+    color: $color--white;
 
-    h1 {
-        color: $color--theme-primary;
-        &:after {
-            background: lighten($color--theme-primary, 20%);
-        }
-    }
 
-    svg {fill: $color--black;}
 
     li {
-        background: $color--theme-light;
-        border: 1px solid darken($color--theme-light, 5%);
-
-        h2 {
-            color: $color--black;
-        }
-        svg {
-            fill: $color--theme-secondary;
-        }
+        // background: $color--theme-light;
+        // border: 1px solid darken($color--theme-light, 5%);
+        //
+        // h2 {
+        //     color: $color--black;
+        // }
+        // svg {
+        //     fill: $color--theme-secondary;
+        // }
     }
 }
 

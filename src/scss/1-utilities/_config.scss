@@ -53,7 +53,7 @@ $base__font-weight: $font-weight--medium;
 
 $base__font-family--heading: $font-family--secondary;
 $base__font-weight--heading: $font-weight--bold;
-$base__line-height--heading: $base__line-height;
+$base__line-height--heading: $base__line-height / 1.4;
 
 // Line Height Grid
 
@@ -85,7 +85,7 @@ $color--yellow: #f4b400;
 $color--theme-primary: #454DE1;
 $color--theme-secondary: #812AE1;
 $color--theme-dark: #1C1C36;
-$color--theme-highlight: #FFCE4E;
+$color--theme-highlight: #1B82D7;
 $color--theme-light: #FCFCFC;
 
 // UI Colors
@@ -102,22 +102,22 @@ $ui-colors: (
 
 $border__radius: .1rem;
 $border--width: .1rem;
-$border--color: $color--grey;
+$border--color: $color--white;
 $border--style: solid;
 
 // Table
 
 $table__border--width: .1rem;
-$table__border--color: $color--grey;
+$table__border--color: $color--white;
 $table__border--style: solid;
 
 // Forms
 
 $forms__border--width: .1rem;
-$forms__border--color: $color--grey;
+$forms__border--color: $color--white;
 $forms__border--style: solid;
 
-$forms__border--color--focus: $color--grey;
+$forms__border--color--focus: $color--white;
 
 // Blockquote
 
