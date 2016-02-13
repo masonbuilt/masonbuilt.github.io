@@ -92,7 +92,6 @@ svg {
 
 // Layout
 
-
 @include breakpoint($xlarge) {
 
     .site-wrap {
@@ -121,6 +120,7 @@ svg {
         width: $spacing * 10;
         z-index: 1;
         padding: $spacing;
+        border-right: 1px $border--style rgba($color--black, .75);
     }
 
     .main-nav {
@@ -145,7 +145,6 @@ svg {
     }
 }
 
-
 .section-what {
     ul {
         padding: 0;
@@ -163,12 +162,7 @@ svg {
             }
 
             .icn-wrap {
-                // flex: 0 0 $spacing;
-                // margin-right: $spacing--small;
-                // display: flex;
-
                 svg {
-                    // margin-top: $spacing * .25;
                     max-width: $spacing * 10;
                     max-height: $spacing * 10;
                 }
@@ -233,6 +227,9 @@ h1 {
 }
 
 .section__inner {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+
     @include breakpoint($medium) {
         padding-top: $spacing * 2;
         padding-bottom: $spacing * 2;
@@ -253,8 +250,8 @@ h1 {
     position: fixed;
     transition: all .3s ease;
     transform: translateY(- $spacing * 5) perspective(400px) rotate3d(1, 0, 0, 90deg);
-    border-bottom: $border--width $border--style $border--color;
-    border-top: $border--width $border--style $border--color;
+    border-bottom: 1px $border--style $border--color;
+    border-top: 1px $border--style $border--color;
 
     &.is-active {
         transform: translateY(0) perspective(400px);
@@ -262,7 +259,6 @@ h1 {
 
     @include breakpoint($xlarge) {
         border-top: none;
-        border-left: $border--width $border--style $border--color;
         left: $spacing * 10;
         width: calc(100% - 300px );
         top: 0;
@@ -351,16 +347,12 @@ h1 {
     }
 }
 
-// How we do it
-
-.process__block {
-    border: ($border--width * 2) $border--style $border--color;
-    padding: $spacing;
-    width: $spacing * 10;
-    height: $spacing * 10;
+.section-who,
+.section-what,
+.section-how {
+    border-top: 1px $border--style $border--color;
 }
 
-.process__title {
-    text-align: center;
-    margin-top: $spacing--small;
+.site-footer {
+    border-top: 1px $border--style rgba($color--black, .75);
 }
