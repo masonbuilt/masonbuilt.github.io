@@ -8,6 +8,16 @@
     background-color: $color--theme-dark;
     color: $color--white;
 
+    &.site-footer a {
+        color: rgba($color--white, .75);
+        border-bottom: $border--width $border--style $border--color;
+
+        &:hover {
+            color: $color--white;
+            border: none;
+        }
+    }
+
     .main-nav__link {
         color: $color--white;
 
@@ -49,20 +59,6 @@
 .theme--light--secondary {
     background-color: $color--theme-highlight;
     color: $color--white;
-
-
-
-    li {
-        // background: $color--theme-light;
-        // border: 1px solid darken($color--theme-light, 5%);
-        //
-        // h2 {
-        //     color: $color--black;
-        // }
-        // svg {
-        //     fill: $color--theme-secondary;
-        // }
-    }
 }
 
 // Secondary Theme
