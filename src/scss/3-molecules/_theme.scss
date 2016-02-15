@@ -39,7 +39,7 @@
 
 // Light Theme
 
-.theme--light {
+.theme--blue {
     background-color: $color--theme-primary;
     color: $color--white;
 
@@ -50,13 +50,11 @@
             background: $color--white;
         }
     }
-
-    svg {fill: $color--black;}
 }
 
 // Light Theme Secondary
 
-.theme--light--secondary {
+.theme--teal {
     background-color: $color--theme-highlight;
     color: $color--white;
 }
@@ -65,13 +63,5 @@
 
 .theme--secondary {
     background-color: $color--theme-secondary;
-    color: $color--white;
-}
-
-
-
-
-.bg4 {
-    background-color: $color--theme-highlight;
     color: $color--white;
 }

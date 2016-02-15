@@ -5,8 +5,7 @@
 }
 
 .process__row1,
-.process__row2,
-.process__row3 {
+.process__row2 {
     display: flex;
     margin-top: $spacing;
     justify-content: center;
@@ -21,9 +20,21 @@
     }
 }
 
-.process__row1,
-.process__row3 {
+.process__row1 {
     flex: 1 0 100%;
+}
+
+.process__row3 {
+    width: 100%;
+    margin-top: $spacing;
+}
+
+.spaceship-wrap {
+    margin: 0 auto;
+
+    h4 {
+        text-align: center;
+    }
 }
 
 .process__row2 {
@@ -139,6 +150,10 @@
     padding: $spacing;
     border: ($border--width * 2) $border--style $border--color;
     position: relative;
+}
+
+.process__block,
+.process__row3 {
     background-color: rgba($color--white, .05);
 }
 
