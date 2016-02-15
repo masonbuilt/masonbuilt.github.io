@@ -1,7 +1,16 @@
-# A Website
+# Deployment:
 
+Get on your development branch.
 
-Linux install:
+Make sure it's synced with upstream (`git pull upstream development`)
+
+```
+git push upstream `git subtree split --prefix build master`:master --force
+```
+
+This will force push your local `build` subtree to master and [our page](http://masonbuilt.com)
+
+### Linux build:
 
 ```
 sudo apt-get update
