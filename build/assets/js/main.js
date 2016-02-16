@@ -1,1 +1,0 @@
-smoothScroll.init(),gumshoe.init({offset:5,activeClass:"is-current"}),function(){$(".js-btnContact").click(function(){event.preventDefault(),$(".js-contactWrap").toggleClass("is-active"),$(this).toggleClass("is-down")})}(window);
