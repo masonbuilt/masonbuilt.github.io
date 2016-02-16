@@ -4,6 +4,8 @@ Get on your development branch.
 
 Make sure it's synced with upstream (`git pull upstream development`)
 
+Create a build using `gulp build`
+
 ```
 git push upstream `git subtree split --prefix build master`:master --force
 ```
