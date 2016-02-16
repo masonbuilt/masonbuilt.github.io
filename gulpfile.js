@@ -148,7 +148,7 @@ gulp.task('move-images', function() {
 // Compress Images
 gulp.task('build-images', function() {
   return gulp.src('src/img/**/*')
-    .pipe(image())
+    .pipe(image({svgo: false}))
     .pipe(gulp.dest(buildPath + '/img'));
 });
 
