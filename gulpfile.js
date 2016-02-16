@@ -145,24 +145,30 @@ gulp.task('move-images', function() {
     .pipe(gulp.dest(tempFolderAssets + '/img'));
 });
 
-gulp.task('move-favicon', function() {
-  return gulp.src('src/favicon.ico')
-    .pipe(gulp.dest('build'));
-});
-
-gulp.task('move-icons', function() {
-  return gulp.src('src/*.png')
-    .pipe(gulp.dest('build'));
-});
-
-
 // Compress Images
-
-// Move Images
 gulp.task('build-images', function() {
   return gulp.src('src/img/**/*')
     .pipe(image())
     .pipe(gulp.dest(buildPath + '/img'));
+});
+
+// Move CNAME to Build
+gulp.task('build-cname', function() {
+  return gulp.src('CNAME')
+    .pipe(gulp.dest('build'));
+});
+
+// Move favicon to Build
+gulp.task('build-favicon', function() {
+  return gulp.src('src/favicon.ico')
+    .pipe(gulp.dest('build'));
+});
+
+// Move icons to Build
+gulp.task('build-icons', function() {
+  return gulp.src('src/*.png')
+    .pipe(image())
+    .pipe(gulp.dest('build'));
 });
 
 
@@ -216,4 +222,4 @@ gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 gulp.task('watch', ['serve']);
 
 // Build Production
-gulp.task('build', ['clean-build', 'build-css', 'build-html', 'build-javascript', 'build-images', 'move-favicon', 'move-icons']);
+gulp.task('build', ['clean-build', 'build-css', 'build-html', 'build-javascript', 'build-images', 'build-favicon', 'build-icons', 'build-cname']);
