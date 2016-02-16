@@ -1,0 +1,150 @@
+// Sidebar
+
+@include breakpoint($xlarge) {
+    .sidebar {
+        cursor: default;
+        height: 100vh;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        width: $spacing * 10;
+        z-index: 1;
+        padding: $spacing;
+        border-right: 1px $border--style rgba($color--black, .75);
+    }
+}
+
+@include breakpoint(max-width $xlarge) {
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+// Navigation
+
+.main-nav__link {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        transform: scale3d(0, 1, 1);
+    	transition: transform 0.1s;
+    }
+    @include breakpoint($xlarge) {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba($color--white, .1);
+            height: 4px;
+        }
+    }
+}
+
+.is-current {
+    .main-nav__link {
+        &::before {
+            transform: scale3d(1, 1, 1);
+        	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        	transition-duration: 0.3s;
+        }
+    }
+}
+
+@include breakpoint($small) {
+    .main-nav__list {
+        display: hidden;
+    }
+}
+
+@include breakpoint($xlarge) {
+    .main-nav {
+        min-height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    .main-nav__list {
+        align-self: center;
+        width: 100%;
+    }
+}
+
+
+// Contact
+
+.main-nav__contact {
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+    a {
+        text-align: center;
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+    @include breakpoint(max-width $small) {
+        left: 0;
+    }
+
+    @include breakpoint($xlarge) {
+        top: $spacing * 2;
+        right: $spacing;
+        left: $spacing;
+    }
+
+    .main-nav__link {
+        background: $color--theme-dark;
+
+        &:focus {
+            background: $color--theme-dark;
+        }
+
+        &:hover {
+            color: $color--white;
+            background: lighten($color--theme-dark, 10%);
+        }
+
+        @include breakpoint($small) {
+            margin: $spacing--small / 2;
+            padding-top: $spacing--small / 2;
+            padding-bottom: $spacing--small / 2;
+            border: $border--width $border--style $border--color;
+        }
+    }
+}
+
+.contact-arrow {
+    margin-left: .2rem;
+    display: inline-block;
+    transform: rotate3d(0, 0, 0, 0deg);
+    transition: all .3s ease;
+    display: inline;
+    width: $spacing--small;
+    height: $spacing--small;
+
+    @include breakpoint($medium) {
+        position: relative;
+        top: 2px;
+    }
+
+    .is-down & {
+        transform: rotate3d(1, 0, 0, 180deg);
+    }
+}
