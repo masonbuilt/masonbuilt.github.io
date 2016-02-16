@@ -1,0 +1,52 @@
+// Contact
+
+.contact__wrap {
+    position: fixed;
+    z-index: 2;
+    top: $spacing * 2;
+    width: 100%;
+    padding: $spacing;
+    transition: all .3s ease;
+    transform: translateY(- $spacing * 5) perspective(400px) rotate3d(1, 0, 0, 90deg);
+    border-top: 1px $border--style $border--color;
+    border-bottom: 1px $border--style $border--color;
+    justify-content: center;
+
+    &.is-active {
+        transform: translateY(0) perspective(400px);
+    }
+
+    @include breakpoint($xlarge) {
+        top: 0;
+        left: $spacing * 10;
+        width: calc(100% - 300px );
+        border-top: none;
+    }
+}
+
+.contact__title,
+.contact__email {
+    padding-top: $spacing--small * .8;
+    padding-right: $spacing--small;
+    padding-left: $spacing--small;
+    text-align: center;
+
+    h2 {
+        @extend .h4;
+    }
+}
+
+.contact__email {
+    a {
+        color: $color--white;
+        border-bottom: $border--width $border--style $border--color;
+
+        &:hover {
+            border: none;
+        }
+    }
+}
+
+.contact__title {
+    border-right: none;
+}

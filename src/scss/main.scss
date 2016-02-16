@@ -36,14 +36,22 @@
 @import "2-atoms/typography";
 
 // Molecules
-// @import "3-molecules/block-grid";
+
 @import "3-molecules/nav";
-@import "3-molecules/intro";
-@import "3-molecules/who";
-@import "3-molecules/how";
-@import "3-molecules/theme";
 
 // Organisms
 
-// Templates
-@import "5-templates/home";
+@import "4-organisms/contact";
+@import "4-organisms/how";
+@import "4-organisms/intro";
+@import "4-organisms/sidebar";
+@import "4-organisms/what";
+@import "4-organisms/who";
+
+// Pages
+
+@import "5-pages/home";
+
+// Skin
+
+@import "6-skin/theme";

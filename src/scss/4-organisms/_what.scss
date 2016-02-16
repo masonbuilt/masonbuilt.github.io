@@ -1,0 +1,27 @@
+// What we do
+
+.section-what {
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 0;
+            padding: $spacing;
+            text-align: center;
+            background: rgba($color--white, .1);
+            border: $border--width $border--style rgba($color--white, .15);
+
+            svg {
+                margin-bottom: $spacing;
+            }
+
+            .icn-wrap {
+                svg {
+                    max-width: $spacing * 10;
+                    max-height: $spacing * 10;
+                }
+            }
+        }
+    }
+}

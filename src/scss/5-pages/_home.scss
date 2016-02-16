@@ -1,0 +1,75 @@
+// Home page
+
+// Layout
+
+@include breakpoint($xlarge) {
+
+    .site-wrap {
+        display: flex;
+    }
+
+    .main-content {
+        flex: 1 1 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin-left: $spacing * 10;
+
+        .section__inner {
+            max-width: ($spacing * 45);
+        }
+    }
+}
+
+// Global
+
+svg {
+    width: 100%;
+    fill: $color--white;
+}
+
+h1 {
+    position: relative;
+    margin-bottom: $spacing;
+    z-index: 0;
+
+    &:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        background: $color--white;
+        width: 100%;
+        left:0;
+        bottom: -$spacing--small;
+    }
+}
+
+.section__inner {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+
+    @include breakpoint($medium) {
+        padding-top: $spacing * 2;
+        padding-bottom: $spacing * 2;
+    }
+    @include breakpoint($xxlarge) {
+        padding: $spacing * 2;
+    }
+}
+
+.section-who,
+.section-what,
+.section-how {
+    border-top: 1px $border--style $border--color;
+}
+
+.section-who__title,
+.section-what__title,
+.section-how__title {
+    max-width: $spacing * 30;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-footer {
+    border-top: 1px $border--style rgba($color--black, .75);
+}
