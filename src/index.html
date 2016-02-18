@@ -51,7 +51,7 @@
 			<aside class="data-gumshoe-header sidebar theme--dark">
 				<nav class="main-nav">
 		            <ul class="main-nav__list" data-gumshoe>
-						<li class="main-nav__item is-current logo">
+						<li class="main-nav__item is-current">
 		                    <a data-scroll href="#intro" class="main-nav__link js-menuLink">
 								Mason
 							</a>
@@ -81,7 +81,13 @@
 				<!-- Intro -->
 				<section class="section-intro theme--secondary" id="intro">
 					<div class="section__inner">
-						<h1>We are Mason</h1>
+						<h1>We are <span class="visuallyhidden">Mason</span>
+							<div class="logo">								
+								<svg class="icn-logo">
+									<use xlink:href="#icn-logo"></use>
+								</svg>
+							</div>
+						</h1>
 						<p>We create digital products, with purpose.</p>
 						<a href="#who" class="btn" data-scroll>Learn More</a>
 					</div>

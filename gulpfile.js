@@ -31,7 +31,8 @@ var autoprefixerOptions = {
 gulp.task('serve', ['clean', 'compile-css', 'compile-html', 'compile-javascript', 'move-images',], function() {
 
     browserSync.init({
-        server: "./temp"
+        server: "./temp",
+        port: 4000
     });
 
     gulp.watch("src/scss/**/*.scss", ['compile-css']);

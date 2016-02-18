@@ -15,6 +15,18 @@ gumshoe.init({
             event.preventDefault();
             $('.js-contactWrap').toggleClass('is-active');
             $(this).toggleClass('is-down');
-        })
+        });
 
 })(window);
+
+
+(function(){
+
+    var waypoint1 = new Waypoint({
+      element: document.getElementById('who'),
+      handler: function(direction) {
+        console.log('Scrolled to waypoint!')
+      }
+    });
+
+})();

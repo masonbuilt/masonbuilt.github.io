@@ -22,6 +22,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    overflow: hidden;
 
     @include breakpoint(0 $medium) {
         display: flex;
@@ -32,7 +33,6 @@
     @include breakpoint($medium $xlarge) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
     }
 
 }
@@ -44,11 +44,17 @@
     @include breakpoint(max-width $large) {
         margin-bottom: 0;
     }
+    @include breakpoint($xlarge) {
+        margin-bottom: $spacing--small;
+    }
 }
 
 .main-nav__link {
     display: block;
     padding: $spacing--small;
+    text-transform: uppercase;
+    font-weight: $font-weight--light;
+    letter-spacing: 1px;
 
     @include breakpoint($xlarge) {
         text-align: right;

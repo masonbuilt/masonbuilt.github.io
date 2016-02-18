@@ -7,33 +7,48 @@
     background-position: top right;
     background-size: 100% 100%;
 
+    .icn-logo {
+        width: $spacing * 8.5;
+        height: $spacing * 3;
+
+        @include breakpoint($medium) {
+            width: $spacing * 10;
+            height: $spacing * 3;
+        }
+
+    }
+
     .btn {
         margin-top: $spacing--small;
 
         @include breakpoint($xlarge) {
-            margin-top: $spacing;            
+            margin-top: $spacing;
         }
     }
 
     @include breakpoint(max-width $xlarge) {
-        margin-top: $spacing * 2; // Add spacing for fixed header
-        padding-top: $spacing * 4;
-        padding-bottom: $spacing * 4;
+        margin-top: $spacing * 1; // Add spacing for fixed header
+        padding-top: $spacing * 2;
+        padding-bottom: $spacing * 2;
     }
 
-    @include breakpoint($xlarge) {
+    @include breakpoint($medium) {
         display: flex;
         height: 100vh;
 
         .section__inner {
-            padding-left: $spacing * 2;
+            margin-left: $spacing * 2;
             align-self: center;
         }
     }
 
+    h1 {
+        font-weight: $font-weight--medium;
+    }
+
     @include breakpoint($medium) {
         h1 {
-            font-size: $font-size--xxlarge;
+            font-size: $font-size--xlarge;
             margin-bottom: $spacing;
         }
 
@@ -46,5 +61,24 @@
         max-width: $spacing * 20;
         padding-right: $spacing;
         padding-left: $spacing;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-name: dropIntro;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-duration: 2s;
+    }
+}
+
+@keyframes dropIntro {
+    0% {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
     }
 }

@@ -37,16 +37,15 @@ input[type="submit"] {
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
-    border: $btn__border-width solid $btn__border-color;
-    background: $btn__color;
+    text-transform: uppercase;
+    border: $btn__border-width solid rgba($btn__border-color, .5);
     color: $btn__font-color;
     border-radius: $border__radius;
-    transition: background $transition__time ease-out,
+    transition: border $transition__time ease-out,
     color $transition__time ease-out;
 
     &:hover,
     &:focus {
-        background-color: $btn__color--hover;
         border-color: $btn__border-color--hover;
         color: $btn__font-color--hover;
     }
